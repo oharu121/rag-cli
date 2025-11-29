@@ -1,0 +1,36 @@
+RAG (Retrieval-Augmented Generation) Overview
+
+RAG is a technique that enhances Large Language Models by providing them with relevant context from external documents. Instead of relying solely on the model's training data, RAG retrieves relevant information at query time.
+
+How RAG Works
+
+1. Document Ingestion: Documents are loaded and split into smaller chunks.
+2. Embedding: Each chunk is converted into a vector (numerical representation).
+3. Storage: Vectors are stored in a vector database for efficient similarity search.
+4. Query: When a user asks a question, it's also converted to a vector.
+5. Retrieval: The most similar document chunks are retrieved from the database.
+6. Generation: The LLM generates an answer using the retrieved context.
+
+Benefits of RAG
+
+- Up-to-date information: Can access current documents, not limited to training data.
+- Source attribution: Answers can be traced back to specific documents.
+- Reduced hallucination: The model has actual context to base answers on.
+- Domain-specific knowledge: Can be customized for specific use cases.
+
+Key Components
+
+Vector Database: Stores document embeddings for similarity search. Examples include Chroma, Pinecone, and FAISS.
+
+Embedding Model: Converts text to vectors. Options include OpenAI embeddings and Sentence-Transformers.
+
+Text Splitter: Divides documents into chunks. RecursiveCharacterTextSplitter is recommended for most use cases.
+
+LLM: Generates the final response. Can use GPT-4, Claude, Gemini, or other models.
+
+Best Practices
+
+- Use chunk overlap (10-20%) to preserve context across chunk boundaries.
+- Choose appropriate chunk sizes based on your content (typically 500-1500 characters).
+- Include metadata with chunks for better filtering and attribution.
+- Test different embedding models to find the best fit for your domain.
