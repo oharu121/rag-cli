@@ -5,7 +5,7 @@ description = "Learning RAG (Retrieval-Augmented Generation) with LangChain"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "langchain>=0.3",
+    "langchain>=1.2.15",
     "langchain-community>=0.3",
     "langchain-chroma>=1.1.0",
     "langchain-google-genai>=2.0",
