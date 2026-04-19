@@ -11,7 +11,7 @@ dependencies = [
     "langchain-google-genai>=4.2.1",
     "langchain-huggingface>=1.2.2",
     "chromadb>=1.5.7",
-    "sentence-transformers>=5.4.0",
+    "sentence-transformers>=5.4.1",
     "python-dotenv>=1.2.2",
 ]
 
